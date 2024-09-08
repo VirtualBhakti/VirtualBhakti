@@ -3,18 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Bhakti</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>VirtualBhakti.com - Your Gateway to Indian Spirituality</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #FF9933;
+            --secondary-color: #138808;
+            --background-color: #FFF7E6;
+            --text-color: #333;
+            --accent-color: #FF5733;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/api/placeholder/800/400');
+            background-size: cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .feature-box {
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h2, .feature-box h3 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .deity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .deity-item {
+            text-align: center;
+        }
+
+        .deity-item img {
+            max-width: 100%;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .om-symbol {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .deity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+
+            .feature-box {
+                padding: 15px;
+            }
+
+            .deity-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="banner">
-        <img src="./assests/banner.webp" alt="Virtual Bhakti Banner" class="banner-image">
-        <div class="banner-text">
-            <h1>Virtual Bhakti</h1>
-            <p>Experience the divine through our virtual platform. Join us for online bhajans, aartis, and spiritual discourses.</p>
+    <header>
+        <div class="container">
+            <h1>॥ VirtualBhakti.com ॥</h1>
+            <p>Your Gateway to Indian Spirituality and Devotion</p>
         </div>
-    </div>
-    <div class="content">
-    </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Bhakti</a></li>
+                <li><a href="#deities">Deities</a></li>
+                <li><a href="#resources">Spiritual Resources</a></li>
+                <li><a href="#community">Sangha (Community)</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <section id="home">
+                <div class="feature-box">
+                    <h2>🕉️ Welcome to VirtualBhakti</h2>
+                    <p>Embark on a spiritual journey through the rich tapestry of Indian devotional practices and culture. Let the divine grace guide your path to inner peace and enlightenment.</p>
+                </div>
+            </section>
+            
+            <section id="featured">
+                <div class="feature-box">
+                    <h3>🙏 Daily Darshan</h3>
+                    <p>Begin your day with a virtual darshan of the divine. May this sacred vision fill your heart with devotion and blessings.</p>
+                    <img src="/api/placeholder/400/300" alt="Daily Darshan Placeholder" style="max-width:100%; height:auto;">
+                </div>
+                <div class="feature-box">
+                    <h3>🎵 Bhajan of the Day</h3>
+                    <p>Immerse yourself in the melodious vibrations of devotion. Today's bhajan is dedicated to Lord Krishna.</p>
+                    <audio controls style="width:100%; margin-top:10px;">
+                        <source src="#" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </section>
+            
+            <section id="deities">
+                <div class="feature-box">
+                    <h3>Explore the Divine Pantheon</h3>
+                    <div class="deity-grid">
+                        <div class="deity-item">
+                            <img src="/api/placeholder/150/150" alt="Ganesha">
+                            <p>Ganesha</p>
+                        </div>
+                        <div class="deity-item">
+                            <img src="/api/placeholder/150/150" alt="Krishna">
+                            <p>Krishna</p>
+                        </div>
+                        <div class="deity-item">
+                            <img src="/api/placeholder/150/150" alt="Lakshmi">
+                            <p>Lakshmi</p>
+                        </div>
+                        <div class="deity-item">
+                            <img src="/api/placeholder/150/150" alt="Shiva">
+                            <p>Shiva</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="upcoming">
+                <div class="feature-box">
+                    <h3>🎉 Upcoming Sacred Festivals</h3>
+                    <ul>
+                        <li>Diwali - The Festival of Lights</li>
+                        <li>Holi - The Celebration of Colors</li>
+                        <li>Navaratri - Nine Nights of the Divine Mother</li>
+                        <li>Janmashtami - Lord Krishna's Birth Celebration</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="om-symbol">ॐ</div>
+            <p>&copy; 2024 VirtualBhakti.com. May all beings be happy and free.</p>
+        </div>
+    </footer>
 </body>
 </html>
